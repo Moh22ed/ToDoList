@@ -1,0 +1,23 @@
+<div class="container my-5">
+
+<div class="row">
+  <div class="col-lg-6">
+    <div class="card bg-dark text-light">
+    <div class="card-body">
+      <p class="card-title lead">Add A Task</p>
+      <form (submit)="add()">
+        <div class="form-group">
+          <input type="text" class="form-control" [(ngModel)]="text" [ngModelOptions]="{standalone: true}">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</div>
+<br>
+<br>
+  <p class="lead">ToDo List</p>
+  <ul *ngFor="let todo of todos">
+    <li>{{todo.text}}</li>
+  </ul>
+</div>
